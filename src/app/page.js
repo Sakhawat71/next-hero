@@ -6,6 +6,7 @@ export default function Home() {
             <div>
                 <h1>Hello World</h1>
                 <p>just test</p>
+                <p>hello </p>
             </div>
         </div>
     );
