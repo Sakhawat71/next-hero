@@ -5,7 +5,18 @@ export async function GET() {
 }
 
 export async function POST(request) {
-    const newComment = request.json();
+
+    const newComment = await request.json();
+
+    comments.push({
+        id: comments.length + 1,
+        text: newComment.text,
+    });
+
+    return Response.json({
+        message: "hello world",
+        comments
+    })
 }
 
 const comments = [
