@@ -1,8 +1,8 @@
-export async function GET(request,{params}){
+export const GET = async (request, { params }) => {
 
     console.log(params.id);
 
-    return Response.json({
-        message: "this is dynamic id",
-    })
+    return new Response(JSON.stringify({
+        message: `this is dynamic route for : ${params.id}`,
+    }))
 }
